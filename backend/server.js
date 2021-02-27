@@ -22,6 +22,11 @@ app.use('/api/noticias', newsRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/upload', uploadRoutes)
 
+
+const __dirname = path.resolve()
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
+
+
 if(process.env.NODE_ENV ===  'production') {
     app.use(express.static(path.join(__dirname, '/fronted/build')))
 
@@ -32,9 +37,6 @@ if(process.env.NODE_ENV ===  'production') {
         res.send('API is running......')
     })
 }
-
-const __dirname = path.resolve()
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 app.use(notFound)
 
