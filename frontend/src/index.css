@@ -1,13 +1,346 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2!important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  min-height: 80vh;
+}
+
+.noticias-btn{
+  margin-top: 2px;
+}
+
+.fb-icon {
+  height: 24px;
+}
+
+.ig-icon {
+  height: 24px;
+}
+
+.contact-btn {
+  height: 40px;
+  margin-top: 5px;
+}
+
+.logout-btn{
+  padding-right: .5rem;
+}
+
+.billboard-container{
+  background-color: #d4d1d1;
+  display: flex;
+  justify-content: center;
+}
+
+.billboard-row-a{
+  display: flex;
+}
+
+.billboard-image{
+  margin: 1rem 0rem 0rem 5rem;
+  padding-right: 5rem;
+  opacity: 0;
+}
+
+.billboard-img{
+  width: 100%;
+  height: auto;
+}
+
+.billboard-span{
+  height: 360px;
+  width: 20px;
+  border-left: 6px solid #000;
+  align-self: center;
+  opacity: 0;
+}
+
+.billboard-row-b{
+  display: flex;
+  flex-direction: column;
+}
+
+.billboard-empty-div{
+  flex: 1;
+}
+
+.billboard-text{
+  display: flex;
+  flex: 1;
+}
+
+.billboard-text h2{
+  letter-spacing: -1px;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  color: #d4d1d1;
+}
+
+.billboard-text-1{
+  align-self: flex-start;
+}
+.billboard-text-2{
+  align-self: flex-start;
+}
+
+.snippet h2 {
+  font-size: 0.75rem;
+}
+
+.cards-section{
+  margin-top: 3rem;
+}
+
+.cards-section h3{
+  margin-top: 25px;
+  color: #26488C;
+  font-size: .9rem;
+}
+
+.cards-section p{
+  margin-top: 30px;
+  color: #26488C;
+  font-size: .9rem;
+  line-height: 1.5rem;
+}
+
+.each-card{
+  height: 500px;
+}
+
+.bandera-card-icon {
+  width: 150px;
+  height: auto;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.equipo-card-icon {
+  width: 150px;
+  height: auto;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.manos-card-icon {
+  width: 150px;
+  height: auto;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.footer {
+  height: 300px;
+  background-color: #26488C;
+  display: flex;
+  line-height: 50px;
+  padding: 35px 0px 40px 0px;
+  flex-flow: row wrap;
+}
+
+.logo-footer{
+  padding-left: 40px;
+}
+
+.footer-main-content {
+  flex-direction: column;
+  flex: 4;
+  justify-content: left;
+}
+
+
+.contact-info-container {
+  display: flex;
+  flex: 4;
+  margin-top: 150px;
+}
+
+
+.contact-info-container ul {
+  list-style-type: none;
+}
+
+
+.contact-info-container li {
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+.icons-footer {
+  display: flex;
+  flex: 1;
+  right: 0;
+  padding-right: 55px;
+  position: relative;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
+.fb-icon-footer {
+  padding-right: 20px;
+}
+
+.fb-icon-img {
+  width: 50px;
+  padding-bottom: 20px;
+}
+
+
+.ig-icon-img {
+  width: 50px;
+  padding-bottom: 20px;
+}
+
+
+/* carousel */
+
+.carousel-myclass{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: #D9D9D9;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+  background-color: #D9D9D9;
+}
+.carousel-caption {
+  position: absolute;
+  top: 40px;
+  height: 400px;
+}
+
+
+.carousel-caption h2 {
+  color: #000;
+  font-size: 1rem;
+}
+
+.carousel img {
+  height: 35vw;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 30%;
+}
+.carousel a {
+  margin: 0 auto;
+}
+
+
+@media (max-width: 700px) {
+  .fb-icon {
+    display: none,
+  }
+  
+  .ig-icon {
+    display: none,
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .billboard-img{
+    width: 70vw;
+  }
+
+  .billboard-image{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  .billboard-span{
+    height: 300px;
+    width: 20px;
+    border-left: 6px solid #000;
+    align-self: center;
+    opacity: 0;
+  }
+
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+  .carousel img {
+    height: 60vw;
+    padding: 30px;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .billboard-container{
+    background-color: #d4d1d1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .billboard-row-a{
+    display: flex;
+    justify-content: center;
+  }
+
+  .billboard-image{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+  }
+  
+  .billboard-img{
+    width: 95vw;
+  }
+  
+  .billboard-span{
+    display: none;
+  }
+  
+  .billboard-row-b{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .billboard-empty-div{
+    flex: 1;
+  }
+  
+  .billboard-text{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .billboard-text h2{
+    letter-spacing: -1px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #d4d1d1;
+  }
+  
+  .billboard-text-1{
+    align-self: flex-start;
+  }
+  .billboard-text-2{
+    align-self: flex-start;
+  }
 }
