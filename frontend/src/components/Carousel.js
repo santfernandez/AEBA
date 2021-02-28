@@ -24,7 +24,7 @@ const ProductCarousel = () => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <Container>
-    <Carousel pause='hover' className='bg-dark' id="noticias">
+    <Carousel pause='hover' className='' id="noticias">
       {news.map((singleNew) => (
         <Carousel.Item key={singleNew._id}>
           <Link to={`/noticias/${singleNew._id}`}>
