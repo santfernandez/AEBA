@@ -43,7 +43,7 @@ const createNews =  asyncHandler (async (req, res ) => {
     const singleNew = new News({
         title: "Título de muestra",
         subtitle: "Subtítulo de muestra",
-        image: "/images/sample.jpg",
+        image: "http://drive.google.com/uc?export=view&id=",
         body: "Cuerpo de la noticia",
         category: "Categoría",
         user: req.user._id

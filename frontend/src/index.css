@@ -275,9 +275,9 @@ main {
     font-size: 2.5vw;
   }
   .carousel img {
-    height: 60vw;
-    padding: 30px;
-    margin: 40px;
+    height: 67vw;
+    padding: 0;
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -342,6 +342,53 @@ main {
   }
   .billboard-text-2{
     align-self: flex-start;
+  }
+
+  .cards-section{
+    margin-top: 2rem;
+  }
+  
+  .cards-section h3{
+    margin-top: 15px;
+    color: #26488C;
+    font-size: .8rem;
+  }
+  
+  .cards-section p{
+    margin-top: 15px;
+    color: #26488C;
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+  
+  .each-card{
+    height: 300px;
+  }
+  
+  .bandera-card-icon {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    padding-top: 15px;
+  }
+  
+  .equipo-card-icon {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    padding-top: 15px;
+  }
+  
+  .manos-card-icon {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    padding-top: 15px;
+  }
+
+  .btn-secondary{
+    font-size: 1.7rem!important;
+    padding: 1rem 1.5rem!important;
   }
 
   .contact-info-container {

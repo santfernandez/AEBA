@@ -9,6 +9,7 @@ import Billboard from '../components/Billboard'
 import { listNews } from '../actions/newsActions'
 import Snippet from '../components/Snippet'
 import Cards from '../components/Cards'
+import Affiliate from '../components/Affiliate';
 
 const HomeScreens = () => {
     const dispatch = useDispatch()
@@ -26,6 +27,7 @@ const HomeScreens = () => {
             <Snippet />
             <ProductCarousel />
             <Cards />
+            <Affiliate/>
         </>
     )
 }

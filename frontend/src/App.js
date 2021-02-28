@@ -28,6 +28,10 @@ const App = () => {
                           window.location.href='http://www.instagram.com/aeba_educadores'; 
                           return null;
             }}/>
+            <Route path='/googleform' component={() => { 
+                          window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdc4dFtB0MnLnIA_0wEGriqDMjH4xljahHCtLXs24CFmK1sIA/viewform'; 
+                          return null;
+            }}/>
             <Route path='/gestionarnoticias' component={ManageNewsScreen} />
             <Route path='/gestionarnoticias/:id/editar' component={NewsEditScreen} />
           </Container>

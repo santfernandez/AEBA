@@ -8,6 +8,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { listNewsDetails, updateNews } from '../actions/newsActions'
 import { NEWS_UPDATE_RESET } from '../constants/newsConstants'
+import Styles from './NewsEditScreen.css'
 
 const NewsEditScreen = ({ match, history }) => {
   const newsId = match.params.id
@@ -92,7 +93,7 @@ const NewsEditScreen = ({ match, history }) => {
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Editar Noticia</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -102,7 +103,7 @@ const NewsEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='title'>
-              <Form.Label>Título</Form.Label>
+              <Form.Label className="text-dark">Título</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Ingrese título de la noticia'
@@ -112,7 +113,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='subtitle'>
-              <Form.Label>Copete</Form.Label>
+              <Form.Label className="text-dark">Copete</Form.Label>
               <Form.Control
                 type='string'
                 placeholder='Ingrese copete'
@@ -122,7 +123,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='image'>
-              <Form.Label>Imagen</Form.Label>
+              <Form.Label className="text-dark">Imagen</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Ingrese URL de imagen'
@@ -130,6 +131,7 @@ const NewsEditScreen = ({ match, history }) => {
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               <Form.File
+                className="upload-file-btn"
                 id='image-file'
                 label='Elegir archivo'
                 custom
@@ -139,7 +141,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='body'>
-              <Form.Label>Cuerpo de la noticia</Form.Label>
+              <Form.Label className="text-dark">Cuerpo de la noticia</Form.Label>
               <Form.Control 
                 as="textarea" 
                 rows={3}
@@ -151,7 +153,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='category'>
-              <Form.Label>Categoría</Form.Label>
+              <Form.Label className="text-dark">Categoría</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Ingresar categoría'

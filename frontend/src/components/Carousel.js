@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Carousel, Image } from 'react-bootstrap'
+import { Container, Carousel, Image } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from './Loader'
 import Message from './Message'
@@ -18,11 +18,12 @@ const ProductCarousel = () => {
     dispatch(listNews())
   }, [dispatch])
 
-  return loading ? (
+  return  loading ? (
     <Loader />
   ) : error ? (
     <Message variant='danger'>{error}</Message>
   ) : (
+    <Container>
     <Carousel pause='hover' className='bg-dark' id="noticias">
       {news.map((singleNew) => (
         <Carousel.Item key={singleNew._id}>
@@ -35,6 +36,7 @@ const ProductCarousel = () => {
         </Carousel.Item>
       ))}
     </Carousel>
+  </Container>
   )
 }
 
