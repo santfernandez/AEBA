@@ -10,7 +10,7 @@ import { listNewsDetails, updateNews } from '../actions/newsActions'
 import { NEWS_UPDATE_RESET } from '../constants/newsConstants'
 
 const NewsEditScreen = ({ match, history }) => {
-  const singleNewId = match.params.id
+  const newsId = match.params.id
 
   const [title, setTitle] = useState('')
   const [subtitle, setSubtitle] = useState('')
@@ -22,7 +22,7 @@ const NewsEditScreen = ({ match, history }) => {
   const dispatch = useDispatch()
 
   const newsDetails = useSelector((state) => state.newsDetails)
-  const { loading, error, singleNew } = newsDetails
+  const { loading, error, news } = newsDetails
 
   const newsUpdate = useSelector((state) => state.newsUpdate)
   const {
@@ -31,22 +31,23 @@ const NewsEditScreen = ({ match, history }) => {
     success: successUpdate,
   } = newsUpdate
 
+
   useEffect(() => {
     if (successUpdate) {
       dispatch({ type: NEWS_UPDATE_RESET })
       history.push('/gestionarnoticias')
     } else {
-      if (!singleNew.title || singleNew._id !== singleNewId) {
-        dispatch(listNewsDetails(singleNewId))
+      if (!news.title || news._id !== newsId) {
+        dispatch(listNewsDetails(newsId))
       } else {
-        setTitle(singleNew.title)
-        setSubtitle(singleNew.subtitle)
-        setImage(singleNew.image)
-        setBody(singleNew.body)
-        setCategory(singleNew.category)
+        setTitle(news.title)
+        setSubtitle(news.subtitle)
+        setImage(news.image)
+        setBody(news.body)
+        setCategory(news.category)
       }
     }
-  }, [dispatch, history, singleNewId, singleNew, successUpdate])
+  }, [dispatch, history, newsId, news, successUpdate])
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0]
@@ -75,7 +76,7 @@ const NewsEditScreen = ({ match, history }) => {
     e.preventDefault()
     dispatch(
       updateNews({
-        _id: singleNewId,
+        _id: newsId,
         title,
         subtitle,
         image,
@@ -139,7 +140,9 @@ const NewsEditScreen = ({ match, history }) => {
 
             <Form.Group controlId='body'>
               <Form.Label>Cuerpo de la noticia</Form.Label>
-              <Form.Control
+              <Form.Control 
+                as="textarea" 
+                rows={3}
                 type='text'
                 placeholder='Ingresar cuerpo de la noticia'
                 value={body}

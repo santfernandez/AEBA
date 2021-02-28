@@ -8,7 +8,7 @@ import Paginate from '../components/Paginate'
 import {
   listNews,
   deleteNews,
-  createNews,
+  _createNews
 } from '../actions/newsActions'
 import { NEWS_CREATE_RESET } from '../constants/newsConstants'
 
@@ -32,7 +32,7 @@ const ManageNewsScreen = ({ history, match }) => {
     loading: loadingCreate,
     error: errorCreate,
     success: successCreate,
-    news: createdNews,
+    news: createNews,
   } = newsCreate
 
   const userLogin = useSelector((state) => state.userLogin)
@@ -41,10 +41,12 @@ const ManageNewsScreen = ({ history, match }) => {
   useEffect(() => {
     dispatch({ type: NEWS_CREATE_RESET })
 
-    if (!userInfo) { history.push('/') }
+    if (!userInfo || !userInfo.isAdmin) {
+      history.push('/login')
+    }
 
     if (successCreate) {
-      history.push(`/gestionarnoticias/${createdNews._id}/editar`)
+      history.push(`/gestionarnoticias/${createNews._id}/edit`)
     } else {
       dispatch(listNews('', pageNumber))
     }
@@ -54,7 +56,7 @@ const ManageNewsScreen = ({ history, match }) => {
     userInfo,
     successDelete,
     successCreate,
-    createdNews,
+    createNews,
     pageNumber,
   ])
 
@@ -65,9 +67,8 @@ const ManageNewsScreen = ({ history, match }) => {
   }
 
   const createNewsHandler = () => {
-    dispatch(createNews())
+    dispatch(_createNews())
   }
-
   return (
     <>
       <Row className='align-items-center'>

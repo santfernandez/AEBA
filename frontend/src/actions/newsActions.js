@@ -15,6 +15,7 @@ import {  NEWS_LIST_REQUEST,
           NEWS_UPDATE_SUCCESS,
           NEWS_UPDATE_FAIL,
 } from '../constants/newsConstants'
+import { logout } from '../actions/userActions'
 
 export const listNews = ( ) => async (dispatch) => {
     try {
@@ -87,7 +88,7 @@ export const deleteNews = (id) => async (dispatch, getState) => {
      }
 }
 
-export const createNews = () => async (dispatch, getState) => {
+export const _createNews = () => async (dispatch, getState) => {
   try {
     dispatch({
       type: NEWS_CREATE_REQUEST,
@@ -103,24 +104,29 @@ export const createNews = () => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.post(`/api/noticias/`, {}, config)
+    const { data } = await axios.post(`/api/noticias`, {}, config)
 
     dispatch({
       type: NEWS_CREATE_SUCCESS,
-      payload: data
+      payload: data,
     })
   } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
+    if (message === 'Not authorized, token failed') {
+      dispatch(logout())
+    }
     dispatch({
       type: NEWS_CREATE_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
+      payload: message,
     })
   }
 }
 
-export const updateNews = (singleNew) => async (dispatch, getState) => {
+
+export const updateNews = (news) => async (dispatch, getState) => {
   try {
     dispatch({
       type: NEWS_UPDATE_REQUEST,
@@ -138,8 +144,8 @@ export const updateNews = (singleNew) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/noticias/${singleNew._id}`,
-      singleNew,
+      `/api/noticias/${news._id}`,
+      news,
       config
     )
 
@@ -153,12 +159,12 @@ export const updateNews = (singleNew) => async (dispatch, getState) => {
       error.response && error.response.data.message
         ? error.response.data.message
         : error.message
-    //if (message === 'Not authorized, token failed') {
-      //dispatch(logout())
-    //}
+    if (message === 'Not authorized, token failed') {
+      dispatch(logout())
+    }
     dispatch({
       type: NEWS_UPDATE_FAIL,
       payload: message,
     })
   }
-} 
+}

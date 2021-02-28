@@ -29,10 +29,7 @@ const NewsScreen = ( { match } ) => {
                 <Jumbotron className="bg-info">
                     <p className="text-primary">{news.updatedAt}</p>
                     <h1>{news.title}</h1>
-                    <p className="text-primary">
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
-                    </p>
+                    <p className="text-primary">{news.subtitle}</p>
                 </Jumbotron>
                 </Col>
                 <Col md={12}>

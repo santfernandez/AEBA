@@ -17,7 +17,6 @@ const App = () => {
         <main className='pb-5'>
             <Route path='/' component={HomeScreen} exact />
             <Container>
-           
             <Route path='/noticias/:id' component={NewsScreen} />
             <Route path='/admin' component={LoginScreen} />
             <Route path='/contacto' component={ContactScreen} />
