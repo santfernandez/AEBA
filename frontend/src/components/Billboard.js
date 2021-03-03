@@ -28,7 +28,7 @@ const Billboard = () => {
                     <div className="billboard-text">
                     <div ref={billboardSpan} className="billboard-span"> </div>
                         <h2 ref={billboardText} className="billboard-text-1">
-                            DEFENDÉ TUS DERECHOS<br/>MEJOREMOS LA EDUCACIÓN
+                            DEFENDÉ TUS DERECHOS<br/>MEJOREMOS LA EDUCACIÓN<br/>PENSANDO EN LOS ESTUDIANTES
                         </h2>
                     </div>
                 </div>

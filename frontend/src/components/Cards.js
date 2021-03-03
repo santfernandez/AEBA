@@ -13,7 +13,7 @@ const Cards = () => {
                     <Card.Body>
                     <Card.Title><h3 className="text-center">REPRESENTACIÓN</h3></Card.Title>
                     <Card.Text>
-                        <p className="text-center">Nuestra principal función es la de bregar por un sistema educativo igualitario, robusto, moderno, que respete, amplíe y cumpla con los derechos de sus trabajadores.</p>
+                        <p className="text-center">Nuestra principal función es la de bregar por un sistema educativo igualitario, fortalecido, moderno, que respete, amplíe y cumpla con los derechos de sus trabajadores.</p>
                     </Card.Text>
                     </Card.Body>
                 </Card>
