@@ -195,6 +195,13 @@ main {
 
 
 /* carousel */
+.carousel-myclass{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
@@ -202,17 +209,18 @@ main {
 }
 .carousel-caption {
   position: absolute;
-  top: 0;
+  top: 40px;
 }
 
 .carousel-caption h2 {
-  color: #fff;
+  color: #000;
+  font-size: 1rem;
 }
 
 .carousel img {
-  height: 300px;
-  padding: 30px;
-  margin: 40px;
+  height: 35vw;
+  padding: 0px;
+  margin: 0px;
   margin-left: auto;
   margin-right: auto;
 }
