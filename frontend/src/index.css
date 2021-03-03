@@ -223,6 +223,7 @@ main {
   margin: 0px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0.5;
 }
 .carousel a {
   margin: 0 auto;
