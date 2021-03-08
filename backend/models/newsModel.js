@@ -22,6 +22,34 @@ const newsSchema = mongoose.Schema ({
         type: String,
         required: true
     },
+    body2: {
+        type: String,
+        required: true
+    },
+    body3: {
+        type: String,
+        required: true
+    },
+    body4: {
+        type: String,
+        required: true
+    },
+    body5: {
+        type: String,
+        required: true
+    },
+    body6: {
+        type: String,
+        required: true
+    },
+    body7: {
+        type: String,
+        required: true
+    },
+    body8: {
+        type: String,
+        required: true
+    },
     category: {
         type: String,
         required: true

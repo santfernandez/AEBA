@@ -44,7 +44,15 @@ const createNews =  asyncHandler (async (req, res ) => {
         title: "Título de muestra",
         subtitle: "Subtítulo de muestra",
         image: "http://drive.google.com/uc?export=view&id=",
-        body: "Cuerpo de la noticia",
+        body: "Párrafo 1",
+        body2: "Párrafo 2",
+        body3: "Párrafo 3",
+        body4: "Párrafo 4",
+        body5: "Párrafo 5",
+        body6: "Párrafo 6",
+        body7: "Párrafo 7",
+        body8: "Párrafo 8",
+
         category: "Categoría",
         user: req.user._id
     })
@@ -56,7 +64,7 @@ const createNews =  asyncHandler (async (req, res ) => {
 // @desc    Update news
 // @desc    PUT /api/news/:id
 const updateNews =  asyncHandler (async (req, res ) => {
-    const { title, subtitle, image, body, category } = req.body
+    const { title, subtitle, image, body, body2, body3, body4, body5, body6, body7, body8, category } = req.body
     
     const singleNew = await News.findById(req.params.id)
 
@@ -65,6 +73,13 @@ const updateNews =  asyncHandler (async (req, res ) => {
         singleNew.subtitle = subtitle
         singleNew.image = image
         singleNew.body = body
+        singleNew.body2 = body2
+        singleNew.body3 = body3
+        singleNew.body4 = body4
+        singleNew.body5 = body5
+        singleNew.body6 = body6
+        singleNew.body7 = body7
+        singleNew.body8 = body8
         singleNew.category = category
 
         const updatedNews = await singleNew.save()

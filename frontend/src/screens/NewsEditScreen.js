@@ -17,6 +17,13 @@ const NewsEditScreen = ({ match, history }) => {
   const [subtitle, setSubtitle] = useState('')
   const [image, setImage] = useState('')
   const [body, setBody] = useState('')
+  const [body2, setBody2] = useState('')
+  const [body3, setBody3] = useState('')
+  const [body4, setBody4] = useState('')
+  const [body5, setBody5] = useState('')
+  const [body6, setBody6] = useState('')
+  const [body7, setBody7] = useState('')
+  const [body8, setBody8] = useState('')
   const [category, setCategory] = useState('')
   const [uploading, setUploading] = useState(false)
 
@@ -45,6 +52,13 @@ const NewsEditScreen = ({ match, history }) => {
         setSubtitle(news.subtitle)
         setImage(news.image)
         setBody(news.body)
+        setBody2(news.body2)
+        setBody3(news.body3)
+        setBody4(news.body4)
+        setBody5(news.body5)
+        setBody6(news.body6)
+        setBody7(news.body7)
+        setBody8(news.body8)
         setCategory(news.category)
       }
     }
@@ -82,6 +96,13 @@ const NewsEditScreen = ({ match, history }) => {
         subtitle,
         image,
         body,
+        body2,
+        body3,
+        body4,
+        body5,
+        body6,
+        body7,
+        body8,
         category,
       })
     )
@@ -141,7 +162,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='body'>
-              <Form.Label className="text-dark">Cuerpo de la noticia</Form.Label>
+              <Form.Label className="text-dark">Párrafo 1</Form.Label>
               <Form.Control 
                 as="textarea" 
                 rows={3}
@@ -149,6 +170,90 @@ const NewsEditScreen = ({ match, history }) => {
                 placeholder='Ingresar cuerpo de la noticia'
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body2'>
+              <Form.Label className="text-dark">Párrafo 2</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body2}
+                onChange={(e) => setBody2(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body3'>
+              <Form.Label className="text-dark">Párrafo 3</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body3}
+                onChange={(e) => setBody3(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body4'>
+              <Form.Label className="text-dark">Párrafo 4</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body4}
+                onChange={(e) => setBody4(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body5'>
+              <Form.Label className="text-dark">Párrafo 5</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body5}
+                onChange={(e) => setBody5(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body6'>
+              <Form.Label className="text-dark">Párrafo 6</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body6}
+                onChange={(e) => setBody6(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body7'>
+              <Form.Label className="text-dark">Párrafo 7</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body7}
+                onChange={(e) => setBody7(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='body8'>
+              <Form.Label className="text-dark">Párrafo 8</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3}
+                type='text'
+                placeholder='Ingresar cuerpo de la noticia'
+                value={body8}
+                onChange={(e) => setBody8(e.target.value)}
               ></Form.Control>
             </Form.Group>
 

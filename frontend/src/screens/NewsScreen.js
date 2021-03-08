@@ -36,6 +36,13 @@ const NewsScreen = ( { match } ) => {
                     <Image className='news-image mb-4' src={news.image} alt={news.name} fluid/>
                     <Jumbotron className="news-body">
                         <p className="text-primary">{news.body}</p>
+                        <p className="text-primary">{news.body2}</p>
+                        <p className="text-primary">{news.body3}</p>
+                        <p className="text-primary">{news.body4}</p>
+                        <p className="text-primary">{news.body5}</p>
+                        <p className="text-primary">{news.body6}</p>
+                        <p className="text-primary">{news.body7}</p>
+                        <p className="text-primary">{news.body8}</p>
                     </Jumbotron>
                 </Col>
             </Row> } 
