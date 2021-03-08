@@ -406,3 +406,9 @@ main {
     padding-bottom: 39px;
   }
 }
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .billboard-img {
+    height: 500px;
+  }
+}
