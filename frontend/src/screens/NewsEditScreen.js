@@ -102,7 +102,7 @@ const NewsEditScreen = ({ match, history }) => {
         body5,
         body6,
         body7,
-        body8,
+        body8 ,
         category,
       })
     )
@@ -268,7 +268,7 @@ const NewsEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Button type='submit' variant='primary'>
-              Update
+              Actualizar
             </Button>
           </Form>
         )}

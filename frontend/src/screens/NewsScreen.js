@@ -27,7 +27,6 @@ const NewsScreen = ( { match } ) => {
             <Row>
                 <Col className="mt-4" md={12}>
                 <Jumbotron className="bg-info">
-                    <p className="text-primary">{news.updatedAt}</p>
                     <h1>{news.title}</h1>
                     <p className="text-primary">{news.subtitle}</p>
                 </Jumbotron>
