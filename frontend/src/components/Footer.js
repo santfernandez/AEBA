@@ -15,8 +15,8 @@ const Footer = () => {
                     </div>
                     <div className="contact-info-container">
                         <ul>
-                            <li className="contact-info-phone">Teléfono: (221) 4 123 456</li>
-                            <li className="contact-info-adress">Calle 8 nº 718, La Plata - Buenos Aires</li>
+                            <li className="contact-info-phone"></li>
+                            <li className="contact-info-adress"></li>
                         </ul>
                      </div>
                 </div>
